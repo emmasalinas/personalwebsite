@@ -7,10 +7,7 @@
 $(document).ready(function() {
 
   resetPages();
-
-  if($("#tabOne").css("z-index") == 5 ){
-    openPageOne();
-  }
+  openPageOne();
 
   $("#tabOne").click(function(){resetPages(); openPageOne();});
   $("#tabTwo").click(function(){resetPages(); openPageTwo();});
@@ -18,13 +15,12 @@ $(document).ready(function() {
   $("#tabFour").click(function(){resetPages(); openPageFour();});
   $("#tabFive").click(function(){resetPages(); openPageFive();});
 
-
+  //// - - - - - - - - - - - - - - - - - - - - - - - - - - - - ALL RESETS
   function resetPages(){
     $(".pages").css("display", "none");
     resetTabs();
     resetSlides();
   }
-
   function resetTabs(){
     //reset font and size
     $(".tabTitles").css({"color":"white", "font-size":"16px"});
@@ -36,19 +32,20 @@ $(document).ready(function() {
     $("#tabFour").css({"filter": "brightness(15%)"});
     $("#tabFive").css({"filter": "brightness(10%)"});
   }
-
   function resetSlides(){
-    $("#webDev").css("left", "-606px");
-    $("#andDes1").css("left","-267px");
-    $("#mobApp").css("left","-532px");
-    $("#development").css("left","-378px");
-    $("#andDes2").css("left","-267px");
+    $("img#webDev").css("left", "-606px");
+    $("img#andDes1").css("left","-267px");
+    $("img#mobApp").css("left","-532px");
+    $("img#development").css("left","-378px");
+    $("img#andDes2").css("left","-267px");
+    $("img#logoDes").css("left","-355px");
     //add more as more slides are added
+    //media
   }
 
-
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - JS FOR SLIDES
   var animating= false;
-  function slideWDAD(){
+  function slideWEBD(){
     if(animating) return;
     animating = true;
     $("#webDev").animate({left: "+=606px"}, 606);
@@ -58,7 +55,6 @@ $(document).ready(function() {
       });
     },581);
   }
-
   function slideAPPS(){
     $("#mobApp").animate({left: "+=532px"}, 532);
     setTimeout(function(){
@@ -68,9 +64,13 @@ $(document).ready(function() {
      $("#andDes2").animate({left: "+=267px"},374);
     },889);
   }
+  function slideLOGO(){
+    $("#logoDes").animate({left: "+=355px"}, 355);
+  }
+  function slideMEDIA(){}//to be created
+  function slideART(){}//to be created
 
-  function slideLOGO(){}//to be created
-
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - JS FOR OPEN TAB
   function openTabSettings(openTabTitle, openTab){
     $(openTabTitle).css({"color":"black", "font-size":"18px"});
     $(openTab).css({
@@ -81,19 +81,16 @@ $(document).ready(function() {
     });
   }
 
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - JS FOR OPEN PAGE
   function openPageOne(){
     openTabSettings("#titleOne","#tabOne");
-    //change order of tabs
     $("#tabFive").css("z-index", "1");
     $("#tabFour").css("z-index", "2");
     $("#tabThree").css("z-index", "3");
     $("#tabTwo").css("z-index", "4");
-    //show page
-    $("#WDAD").css("display", "block");
-    //call slides
-    slideWDAD();
+    $("#WEBD").css("display", "block");
+    slideWEBD();
   }
-
   function openPageTwo(){
     openTabSettings("#titleTwo","#tabTwo");
     $("#tabFive").css({"z-index": "2"});
@@ -103,7 +100,6 @@ $(document).ready(function() {
     $("#APPS").css("display", "block");
     slideAPPS();
   }
-
   function openPageThree(){
     openTabSettings("#titleThree","#tabThree");
     $("#tabFive").css("z-index", "3");
@@ -113,32 +109,21 @@ $(document).ready(function() {
     $("#LOGO").css("display", "block");
     slideLOGO();
   }
-
   function openPageFour(){
-    //replace with openTabSettings() when title is created
-    $("#tabFour").css({
-      "filter": "brightness(100%)",
-      "z-index": "5",
-      "height": "220px",
-      "width": "220px"
-    });
+    openTabSettings("#titleFour","#tabFour");
     $("#tabFive").css("z-index", "4");
     $("#tabThree").css("z-index", "4");
     $("#tabTwo").css("z-index", "3");
     $("#tabOne").css("z-index", "2");
+    slideMEDIA();
   }
-
   function openPageFive(){
-    //replace with openTabSettings() when title is created
-    $("#tabFive").css({
-      "filter": "brightness(100%)",
-      "z-index": "5",
-      "height": "220px",
-      "width": "220px",
-    });
+    openTabSettings("#titleFive","#tabFive");
     $("#tabFour").css({"z-index": "4"});
     $("#tabThree").css({"z-index": "3"});
     $("#tabTwo").css({"z-index": "2"});
     $("#tabOne").css({"z-index": "1"});
+    slideART();
   }
+
 });

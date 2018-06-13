@@ -65,10 +65,8 @@ img#blackMarble{
   border-width: 560px 0px 560px 560px;
   height: 0px;
   width: 0px;
-}
-*/
+}*/
 /* --------------------- TABS --------------------- */
-
 img.tabs{
   height: 216px;
   width: 216px;
@@ -139,9 +137,19 @@ div#titleThree{
   right: 272px;
 }
 
+div#titleFour{
+  top: 518px;
+  right: 126px;
+}
+
+div#titleFive{
+  top: 664px;
+  right: -20px;
+}
+
  /*--------------------- PAGES --------------------- */
 
-div#WDAD{
+div#WEBD{
   display: block;
 }
 
@@ -153,7 +161,25 @@ div#LOGO{
   display: none;
 }
 
- /* --------------------- SLIDING TEXTS --------------------- */
+ /* --------------------- SLIDING IMAGES --------------------- */
+
+img#webDev{
+ height: 130px;
+ width: 606px;
+ position: absolute;
+ top: 45px;
+ left: -606px;
+ z-index: 2;
+}
+
+img#andDes1{
+ height: 130px;
+ width: 267px;
+ position: absolute;
+ top: 145px;
+ left: -267px;
+ z-index: 3;
+}
 
 img#mobApp{
   position: absolute;
@@ -182,20 +208,11 @@ img#andDes2{
   left: -267px;
 }
 
-img#webDev{
-  height: 130px;
-  width: 606px;
+img#logoDes{
   position: absolute;
-  top: 45px;
-  left: -606px;
+  height: 130px;
+  width: 355px;
   z-index: 2;
-}
-
-img#andDes1{
-  height: 130px;
-  width: 267px;
-  position: absolute;
-  top: 145px;
-  left: -267px;
-  z-index: 3;
+  top: 45px;
+  left: -355px;
 }

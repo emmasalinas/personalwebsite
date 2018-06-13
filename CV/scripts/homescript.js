@@ -9,15 +9,12 @@ $(document).ready(function() {
       setTimeout(function(){
         $(".topnav").css("background-color", 'rgba(255,255,255,0.1)');
       }, 40);
-
       setTimeout(function(){
         $(".topnav").css("background-color", 'rgba(255,255,255,0.2)');
       }, 80);
-
       setTimeout(function(){
         $(".topnav").css("background-color", 'rgba(255,255,255,0.4)');
       }, 120);
-
       setTimeout(function(){
         $(".topnav").css("background-color", 'rgba(255,255,255,0.6)');
       }, 160);
@@ -40,5 +37,10 @@ $(document).ready(function() {
       $(".topnav").css("box-shadow", "rgba(0,0,0,0)");
     }
   );
-  
+
+  $('video').css({'width': $(window).width() });
+  $(window).on('resize', function() {
+    $('video').css({ 'height': $(window).height() });
+    $('video').css({ 'width': $(window).width() })
+  });
 });
