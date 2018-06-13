@@ -9,11 +9,11 @@ $(document).ready(function() {
   resetPages();
   openPageOne();
 
-  $("#tabOne").click(function(){resetPages(); openPageOne();});
-  $("#tabTwo").click(function(){resetPages(); openPageTwo();});
-  $("#tabThree").click(function(){resetPages(); openPageThree();});
-  $("#tabFour").click(function(){resetPages(); openPageFour();});
-  $("#tabFive").click(function(){resetPages(); openPageFive();});
+  $("#titleOne").click(function(){resetPages(); openPageOne();});
+  $("#titleTwo").click(function(){resetPages(); openPageTwo();});
+  $("#titleThree").click(function(){resetPages(); openPageThree();});
+  $("#titleFour").click(function(){resetPages(); openPageFour();});
+  $("#titleFive").click(function(){resetPages(); openPageFive();});
 
   //// - - - - - - - - - - - - - - - - - - - - - - - - - - - - ALL RESETS
   function resetPages(){

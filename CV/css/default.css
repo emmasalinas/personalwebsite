@@ -112,39 +112,41 @@ img#tabFive{
 
 div.tabTitles{
   font-size: 18px;
-  height: 0px;
-  width: 200px;
+  height: 60px;
+  width: 203px;
+  padding-top: 15px;
   text-align: center;
   font-family: courier;
   color: black;
   position: absolute;
   z-index: 6;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 
 div#titleOne{
-  top: 78px;
-  right: 564px;
+  top: 60px;
+  right: 576px;
 }
 
 div#titleTwo{
-  top: 224px;
-  right: 418px;
+  top: 204px;
+  right: 432px;
 }
 
 div#titleThree{
-  top: 372px;
-  right: 272px;
+  top: 348px;
+  right: 288px;
 }
 
 div#titleFour{
-  top: 518px;
-  right: 126px;
+  top: 492px;
+  right: 144px;
 }
 
 div#titleFive{
-  top: 664px;
-  right: -20px;
+  top: 636px;
+  right: 0px;
 }
 
  /*--------------------- PAGES --------------------- */
